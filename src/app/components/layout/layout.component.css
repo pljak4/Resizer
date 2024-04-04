@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+
+  .app-header {
+    background-color: #f1f1f1;
+    text-align: center;
+    width: 100%;
+
+    .app-title {
+      font-size: 2rem;
+      color: #323232;
+    }
+  }
+
+  .app-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #ccc;
+
+    .figure-container {
+      position: relative;
+      height: 85vh;
+      width: 60vw;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid #ccc;
+      overflow: auto;
+    }
+  }
+
+  .app-footer {
+    background-color: #323232;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    p {
+      color: white;
+    }
+  }
+}

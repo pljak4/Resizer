@@ -1,0 +1,22 @@
+<svg (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp()" (mousemove)="onMouseMove($event)">
+
+    <rect [attr.width]="rectangle.width" [attr.height]="rectangle.height" [attr.x]="rectangle.x"
+        [attr.y]="rectangle.y" />
+
+    <circle [attr.cx]="rectangle.x" [attr.cy]="rectangle.y" r="5" (mousedown)="onDotMouseDown($event, 'top-left')">
+    </circle>
+
+    <circle [attr.cx]="rectangle.x + rectangle.width" [attr.cy]="rectangle.y" r="5"
+        (mousedown)="onDotMouseDown($event, 'top-right')"></circle>
+
+    <circle [attr.cx]="rectangle.x" [attr.cy]="rectangle.y + rectangle.height" r="5"
+        (mousedown)="onDotMouseDown($event, 'bottom-left')"></circle>
+
+    <circle [attr.cx]="rectangle.x + rectangle.width" [attr.cy]="rectangle.y + rectangle.height" r="5"
+        (mousedown)="onDotMouseDown($event, 'bottom-right')"></circle>
+
+    <text [attr.x]="rectangle.x + rectangle.width / 2" [attr.y]="rectangle.y + rectangle.height + 20"
+        text-anchor="middle" alignment-baseline="middle" class="unselectable" fill="rgb(169, 208, 234)">
+        Perimeter: {{ (rectangle.width + rectangle.height) * 2 }}
+    </text>
+</svg>
